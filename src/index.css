@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+}
+
+code {
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --main: #FF7527;
+  --black: #203239;
+  --background: #EEEDDE;
+}
+
+.navBar {
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #dad9cb68;
+}
+
+.navLinks {
+  padding: 0px 20px;
+  cursor: pointer;
+  font-size: large;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+}
+
+.navLinks:hover{
+  color: var(--main);
+  transition: 0.2s;
+}
+
+
+.sendText {
+  color: white;
+  cursor: pointer;
+}
+
+.file-input {
+  color: transparent;
+  max-width: 80px;
+  /* max-height: 50px; */
+}
+
+.file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.file-input::before {
+  content: 'Select file';
+  color: white;
+  padding-left: 6px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 12pt;
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tx-code {
+  color: white;
+  font-weight: 600;
+}
+
+.receiveText {
+  color: var(--main);
+}
+
+#inputBox {
+  border-radius: 5px;
+  padding: 8px 5px;
+  border: none;
+  margin-right: 12px;
+}
+
+#inputBox:focus {
+  outline: none;
+}
+
+.receiveBox {
+  border: 4px;
+  border-color: #FF7527;
+}
+
+.bannerText {
+  margin: 0;
+}
+
+.typewriter {
+  color: #FF7527;
+}
+
+.aboutHeader {
+  padding-left: 80px;
+  text-align: start;
+  color: var(--main);
+  font-size: 30pt;
+  font-weight: 600;
+}
+
+.aboutImages {
+  padding-left: 80px;
+  display: flex;
+  justify-content: start;
+}
+
+.aboutImages img{
+  margin-right: 50px;
+  max-width: 230px;
+}
+
+.container1recv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container1 input {
+  border-radius: 5px;
+  padding: 8px 5px;
+  border: none;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.container1 button {
+  background-color: white;
+  color: #FF7527;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  width: 60%;
+}
+
+.container1recv input{
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #FF7527;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.container1recv button{
+  padding: 5px;
+  width: 50%;
+  border-radius: 10px;
+  border: 1px solid #FF7527;
+  background-color: #FF7527;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.tx-code{
+  margin: 0;
+}
