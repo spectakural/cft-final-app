@@ -39,6 +39,12 @@ const SendCard = ({ file, setFile }) => {
       alert("Please choose a file first!");
     }
 
+    var currentdate = new Date();
+    var datetime = "Last Sync: " + currentdate.getDay() + "/" + currentdate.getMonth() 
+    + "/" + currentdate.getFullYear() + " @ " 
+    + currentdate.getHours() + ":" 
+    + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+
     //Set filename to code and upload to firebase
     let fileName = txCode;
     const storageRef = ref_storage(storage, `/${file.name}`);
@@ -59,6 +65,7 @@ const SendCard = ({ file, setFile }) => {
           setMyURL(url);
           await setDoc(doc(db, "cftdata", txCode), {
             url: url,
+            timestamp: datetime
           })
           console.log(url);
         });
@@ -72,7 +79,7 @@ const SendCard = ({ file, setFile }) => {
       deleteObject(storageRef).then(() => {
         console.log("File deleted successfully");
       });
-    }, 1000 * 60 * 10);
+    }, 1000 * 60 * 1);
   };
 
   //Use effect to trigger upload to realtime database
@@ -93,7 +100,7 @@ const SendCard = ({ file, setFile }) => {
         <FaPlus color="white" size={15} />
         <div>
           <input type="file" onChange={handleChange} accept="/image/*" />
-          <button onClick={handleUpload}>Upload to Firebase</button>
+          <button onClick={handleUpload}>Send</button>
           <p>{percent}%</p>
         </div>
       </div>
