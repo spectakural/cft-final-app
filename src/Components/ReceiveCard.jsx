@@ -57,7 +57,6 @@ const ReceiveCard = () => {
           onChange={(e) => setDlCode(e.target.value)}
         />
         <button onClick={handleDownload}>Download</button>
-        {/* <FaCloudDownloadAlt color='#FF7527' size={26} /> */}
       </div>
     </div>
   );

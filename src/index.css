@@ -147,10 +147,10 @@ code {
   background-color: white;
   color: #FF7527;
   font-weight: 600;
-  border-radius: 10px;
+  border-radius: 6px;
   border: none;
   padding: 5px;
-  width: 60%;
+  width: 50%;
 }
 
 .container1recv input{
